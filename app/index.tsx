@@ -1,6 +1,9 @@
 import { Text, View } from "react-native";
+import useGeolocation from "../hooks/useGeolocation";
 
 export default function Index() {
+  const [location, error] = useGeolocation();
+  console.log(location, error);
   return (
     <View
       style={{
